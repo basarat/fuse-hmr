@@ -1,0 +1,5 @@
+# IDE 
+.alm/
+
+# Node 
+npm-debug.log*
