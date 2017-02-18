@@ -27,5 +27,8 @@
   "homepage": "https://github.com/basarat/fuse-hmr#readme",
   "peerDependencies": {
     "fuse-box": "*"
+  },
+  "devDependencies": {
+    "typescript": "^2.1.6"
   }
 }
