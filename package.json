@@ -3,7 +3,7 @@
   "version": "0.1.2",
   "description": "Carefully curated FuseBox HMR behaviours",
   "main": "./lib/index.js",
-  "typings": "lib"
+  "typings": "lib",
   "scripts": {
     "buildtsc": "tsc -p .",
     "test": "npm run buildtsc",
