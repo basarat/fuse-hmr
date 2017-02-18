@@ -24,11 +24,11 @@ On an HMR update, by default FuseBox:
 
 With `setStatefulModules('foo','bar')`: 
 * if something other than `foo`, `bar` changed: 
- - flushes all files from *loaded* cache *except* `foo`, and `bar`.
- - patches the changed files on HMR update.
- - runs the application entry point again.
+  * flushes all files from *loaded* cache *except* `foo`, and `bar`.
+  * patches the changed files on HMR update.
+  * runs the application entry point again.
 * if `foo`, `bar` changed: 
- - reloads the window.
+  * reloads the window.
 
 **Why its useful**:
 * For things that register a global hook e.g. `window.addEventListener("hashchange",/*something*/)` you probably don't want these getting flushed from cache and running again.

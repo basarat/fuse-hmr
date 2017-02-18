@@ -6,7 +6,7 @@
     "jsx": "preserve",
     "experimentalDecorators": false,
     "emitDecoratorMetadata": false,
-    "declaration": false,
+    "declaration": true,
     "noImplicitAny": false,
     "suppressImplicitAnyIndexErrors": false,
     "strictNullChecks": false,
