@@ -1,0 +1,31 @@
+{
+  "name": "fuse-hmr",
+  "version": "0.0.0",
+  "description": "Carefully curated FuseBox HMR behaviours",
+  "main": "./lib/index.js",
+  "scripts": {
+    "buildtsc": "tsc -p .",
+    "test": "npm run buildtsc",
+    "start": "npm run buildtsc -- -w",
+    "preversion": "npm run test",
+    "postversion": "git push --follow-tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basarat/fuse-hmr.git"
+  },
+  "keywords": [
+    "fusebox",
+    "typescript",
+    "hmr"
+  ],
+  "author": "basaratali@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/basarat/fuse-hmr/issues"
+  },
+  "homepage": "https://github.com/basarat/fuse-hmr#readme",
+  "peerDependencies": {
+    "fuse-box": "*"
+  }
+}

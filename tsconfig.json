@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "jsx": "none",
+    "experimentalDecorators": false,
+    "emitDecoratorMetadata": false,
+    "declaration": false,
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": false,
+    "strictNullChecks": false,
+    "outDir": "./lib"
+  },
+  "include": [
+    "src"
+  ],
+  "compileOnSave": true,
+  "exclude": [
+    "node_modules"
+  ]
+}
