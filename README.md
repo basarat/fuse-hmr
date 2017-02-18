@@ -10,11 +10,13 @@ npm install fuse-box fuse-hmr
 
 ## Usage
 
-### `setStatefulModules(...moduleNames:string)`
+### `setStatefulModules(FuseBox, moduleNames:string[])`
+
+> NOTE: `FuseBox` here refers to the loader API
 
 ```
 import {setStatefulModules} from 'fuse-hmr';
-setStatefulModules('foo','bar');
+setStatefulModules(FuseBox,['foo','bar']);
 ```
 
 On an HMR update, by default FuseBox: 
@@ -22,7 +24,7 @@ On an HMR update, by default FuseBox:
 * patches the changed files on HMR update.
 * runs the application entry point again.
 
-With `setStatefulModules('foo','bar')`: 
+With `setStatefulModules(FuseBox, ['foo','bar'])`: 
 * if something other than `foo`, `bar` changed: 
   * flushes all files from *loaded* cache *except* `foo`, and `bar`.
   * patches the changed files on HMR update.
@@ -46,5 +48,5 @@ import { App } from "./app";
 ReactDOM.render(<App/>, document.getElementById('root'));
 
 import { setStatefulModules } from 'fuse-hmr';
-setStatefulModules('actions/','stores/', 'router');
+setStatefulModules(FuseBox, ['actions/','stores/', 'router']);
 ```

@@ -1,4 +1,3 @@
-declare var FuseBox: any;
 const customizedHMRPlugin = {
   hmrUpdate: ({ type, path, content }) => {
     if (type === "js") {
@@ -10,15 +9,15 @@ const customizedHMRPlugin = {
       }
 
       /** Otherwise flush the other modules */
-      FuseBox.flush(function(fileName) {
+      _userFuseBox.flush(function(fileName) {
         return !isModuleNameInPath(fileName);
       });
       /** Patch the module at give path */
-      FuseBox.dynamic(path, content);
+      _userFuseBox.dynamic(path, content);
 
       /** Re-import / run the mainFile */
-      if (FuseBox.mainFile) {
-        FuseBox.import(FuseBox.mainFile)
+      if (_userFuseBox.mainFile) {
+        _userFuseBox.import(_userFuseBox.mainFile)
       }
 
       /** We don't want the default behavior */
@@ -33,14 +32,18 @@ let alreadyRegistered = false;
 /** Current names of stateful modules */
 let statefulModules = [];
 
+/** FuseBox instance in the user code base */
+let _userFuseBox: any;
+
 /**
  * Registers given module names as being stateful
  * @param modulesNames full or partial path to module name
  */
-export const setStatefulModules = (...moduleNames: string[]) => {
+export const setStatefulModules = (FuseBox: any, moduleNames: string[]) => {
   if (!alreadyRegistered) {
     alreadyRegistered = true;
     FuseBox.addPlugin(customizedHMRPlugin);
+    _userFuseBox = FuseBox;
   }
   statefulModules = moduleNames;
 }
