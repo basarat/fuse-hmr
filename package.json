@@ -1,6 +1,6 @@
 {
   "name": "fuse-hmr",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Carefully curated FuseBox HMR behaviours",
   "main": "./lib/index.js",
   "scripts": {
