@@ -30,6 +30,6 @@
     "fuse-box": "*"
   },
   "devDependencies": {
-    "typescript": "^2.1.6"
+    "typescript": "^3.5.3"
   }
 }
