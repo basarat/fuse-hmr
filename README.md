@@ -1,5 +1,7 @@
 # WARNING 
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/basarat/fuse-hmr.svg)](https://greenkeeper.io/)
+
 :warning: This package is no longer needed. FuseBox ships with it. [Head here for details!](https://medium.com/@basarat/rethinking-hot-module-reloading-58ce15b5f496#.c04wtx8x6)
 
 # Fuse HMR
